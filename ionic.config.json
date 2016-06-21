@@ -1,0 +1,12 @@
+{
+  "name": "home-accountant",
+  "app_id": "63520321",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/api/v1",
+      "proxyUrl": "http://home-accountant.heroku.com/api/v1"
+    }
+  ]
+}

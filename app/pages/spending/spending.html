@@ -1,0 +1,32 @@
+<ion-navbar *navbar>
+  <ion-title>Расходы</ion-title>
+</ion-navbar>
+
+<ion-content class='spend'>
+  <ion-card>
+    <ion-card-header>
+      По категориям:
+    <hr>
+    </ion-card-header>
+    <ion-card-content > 
+     <ion-row *ngFor="#spend of sumSpends">
+        <ion-col width-20><b>-{{spend.price}}</b></ion-col>
+        <ion-col width-80>{{spend.category.name}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Детально:
+    <hr>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row  *ngFor="#spend of spends">
+        <ion-col width-20><b>-{{spend.price}}</b></ion-col>
+        <ion-col width-55>{{spend.name}}</ion-col>
+        <ion-col width-25>{{spend.created_at.substr(0,10)}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

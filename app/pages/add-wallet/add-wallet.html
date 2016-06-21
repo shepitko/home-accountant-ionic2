@@ -1,0 +1,50 @@
+<!--
+  Generated template for the AddWalletPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+  <ion-title>Добавить запись</ion-title>
+</ion-navbar>
+
+<ion-content padding class="add-wallet">
+  <div padding>
+    <ion-segment >
+      <ion-segment-button value="kittens">
+        Доход
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Расход
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Комментарий</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Категория</ion-label>
+      <ion-select cancelText="отмена" okText="ок">
+        <ion-option value="bacon">Зарплата</ion-option>
+        <ion-option value="olives">Премия</ion-option>
+        <ion-option value="xcheese">Пасивный доход</ion-option>
+        <ion-option value="peppers">Подарок</ion-option>
+        <ion-option value="mushrooms">Продажа</ion-option>
+        <ion-option value="onions">Другое</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Сумма</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button block>Добавить</button>
+  </div>
+  <!--ion-item>
+    <label class="dateLabel">Date of Birth</label>
+    <input type="date">
+  </ion-item-->
+</ion-content>

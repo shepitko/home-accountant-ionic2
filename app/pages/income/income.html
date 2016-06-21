@@ -1,0 +1,32 @@
+<ion-navbar *navbar>
+  <ion-title>Доходы</ion-title>
+</ion-navbar>
+
+<ion-content class="income">
+  <ion-card>
+    <ion-card-header>
+      По категориям:
+    <hr>
+    </ion-card-header>
+    <ion-card-content > 
+     <ion-row *ngFor="#income of sumIncomes">
+        <ion-col width-35><b>+{{income.price}}</b></ion-col>
+        <ion-col width-65>{{income.category.name}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Детально:
+    <hr>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row  *ngFor="#income of incomes">
+        <ion-col width-25><b>+{{income.price}}</b></ion-col>
+        <ion-col width-50>{{income.name}}</ion-col>
+        <ion-col width-25>{{income.created_at.substr(0,10)}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

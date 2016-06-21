@@ -1,0 +1,41 @@
+<ion-navbar *navbar>
+  <ion-title><ion-icon md="md-ionitron"></ion-icon> Семейный Бухгалтер</ion-title>
+</ion-navbar>
+<ion-toolbar>
+  <ion-buttons start>
+    <button [navPush]="addWalletPage">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-segment>
+    <ion-segment-button [navPush]="incomePage"> 
+      Доходы
+    </ion-segment-button>
+    <ion-segment-button [navPush]="spendingPage">
+      Расходы
+    </ion-segment-button>
+  </ion-segment>
+  <ion-buttons end>
+    <button [navPush]="statisticPage">
+      <ion-icon name="stats"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+  <ion-card>
+    <ion-card-content 
+      *ngFor="#wallet of wallets" 
+      class="{{ wallet.category.types == 'income' ? 'income' : 'spending'}}">
+      <ion-row>
+        <ion-col width-20><b>{{ wallet.category.types == 'income' ? '+' : '-'}}{{wallet.price}}</b></ion-col>
+        <ion-col width-55>{{wallet.category.name}}</ion-col>
+        <ion-col width-25>{{wallet.created_at.substr(0,10)}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+  </ion-card>
+</ion-content>
+<ion-toolbar position="bottom">
+  <ion-title>Баланс:{{sum.total}} грн.</ion-title>
+</ion-toolbar>

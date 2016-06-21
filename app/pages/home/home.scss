@@ -1,0 +1,26 @@
+ion-row, ion-col{
+    padding:0;
+    margin:0  
+}
+ion-card{
+    .income{
+        background-color: lightgreen;
+    }
+    .spending{
+        background-color: lightcoral;
+    }
+}
+.income{
+    background-color: lightgreen;
+}
+.spend{
+    background-color: lightcoral;
+}
+.statistic{
+    background-color: lightblue
+}
+.bord{
+    border:1px  grey solid;
+    padding: 0 5px;
+    margin:0;
+}
